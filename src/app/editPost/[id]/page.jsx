@@ -17,7 +17,7 @@ const getTopicById = async (id) => {
     }
 }
 
-export default async function EditPost({ params }) {
+export default async function getServerSideProps({ params }) {
     const { id } = params;
     const { post } = await getTopicById(id);
     const { title, description, imageUrl } = post;
