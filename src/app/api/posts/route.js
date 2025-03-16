@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import connectDB from "../../../../libs/mongodb";
 import Post from "../../../../models/post";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request) {
     const {title, description,imageUrl} = await request.json();
     await connectDB();
