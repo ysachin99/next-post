@@ -18,13 +18,12 @@ const getPosts = async () => {
 
     } catch (err) {
    console.log('Error loading posts: ', err);
-         return { posts: [] };
     }
 }
 
 
 export default async function PostList() {
-    const { posts } = await getPosts() || { posts: [] };
+    const { posts } = await getPosts();
 
     return <div className="mt-[100px]">
         {
